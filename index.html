@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Birthday Certificate</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  body {
+    margin: 0;
+    font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: #f6f9ff;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .card {
+    width: 1000px;
+    height: 700px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 8px solid gold;
+    box-shadow: 0 12px 30px rgba(23,40,80,0.12);
+    position: relative;
+    overflow: hidden;
+    background: url('https://images.pexels.com/photos/1682474/pexels-photo-1682474.jpeg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(0.85); /* makes text readable over image */
+  }
+  .overlay {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(255,255,255,0.85); /* soft overlay for readability */
+    z-index:1;
+  }
+  .content {
+    position: relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .ribbon {
+    position: absolute;
+    left: 40px;
+    top: -20px;
+    background: linear-gradient(90deg,#ff5f6d,#ffc371);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    z-index:3;
+  }
+  h1 {
+    margin: 20px 0 6px;
+    font-size: 52px;
+    font-family: 'Playfair Display', serif;
+    color: #b13e6b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+  .subtitle {
+    color: #666;
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+  .recipient {
+    margin: 18px 0;
+    font-size: 60px;
+    font-weight: 800;
+    color: #293462;
+    text-transform: capitalize;
+  }
+  .message {
+    max-width: 760px;
+    line-height: 1.4;
+    margin: 18px 0 28px;
+    font-size: 20px;
+    color: #444;
+  }
+  .meta {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 36px;
+    padding-top: 12px;
+    border-top: 1px dashed #d4af37; /* golden dashed line */
+  }
+  .date { font-weight:600; color:#444; }
+  .signature {
+    text-align:center;
+    min-width: 280px;
+    color: #444;
+  }
+  .sigline {
+    margin-top: 14px;
+    border-top: 1px solid #d4af37;
+    padding-top: 8px;
+    font-size: 14px;
+    color:#333;
+  }
+  /* Decorative confetti */
+  .confetti { position:absolute; pointer-events:none; z-index:3; }
+  .confetti i {
+    position:absolute;
+    font-size:14px;
+    transform:rotate(25deg);
+    opacity:0.9;
+  }
+  .small { font-size:10px; opacity:0.7; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="overlay"></div>
+    <div class="ribbon">Happy Birthday!</div>
+
+    <div class="content">
+      <h1>Certificate of Celebration</h1>
+      <div class="subtitle">Presented with love to</div>
+
+      <div class="recipient">Clive Mpagi</div>
+
+      <div class="message">
+        This certificate celebrates the special day of <strong>CLIVE </strong>.
+        May your birthday be filled with laughter, cake, and the people who make life sweet.
+        Thank you for being you — here's to another year of adventures!
+      </div>
+
+      <div class="meta">
+        <div class="date">Date: <strong>08,28,1985</strong></div>
+        <div class="signature">
+          <div style="font-weight:700">CLIVE</div>
+          <div class="sigline">From</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- subtle confetti flair -->
+    <div class="confetti" style="left:30px;top:40px;">
+      <i style="color:#ff6b6b; left:0; top:0;">🎉</i>
+      <i style="color:#ffd166; left:40px; top:10px;">✨</i>
+      <i style="color:#06d6a0; left:80px; top:30px;">🎈</i>
+    </div>
+  </div>
+</body>
+</html>
